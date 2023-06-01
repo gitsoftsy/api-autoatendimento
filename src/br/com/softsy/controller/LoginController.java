@@ -11,7 +11,7 @@ import br.com.softsy.model.RetornoAPI;
 import br.com.softsy.rn.LoginRN;
 
 @Controller
-@RequestMapping("login")
+@RequestMapping("/login")
 public class LoginController {
 
 	@RequestMapping(value = { "/aluno" }, method = RequestMethod.POST)
