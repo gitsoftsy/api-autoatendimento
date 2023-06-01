@@ -1,10 +1,10 @@
 package br.com.softsy.model;
 
-public class Error {
+public class MensagemErro {
 	private String message;
 	private String error;
 
-	public Error(String message, String error) {
+	public MensagemErro(String message, String error) {
 		this.message = message;
 		this.error = error;
 	}

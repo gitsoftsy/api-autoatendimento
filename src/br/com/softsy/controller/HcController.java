@@ -12,7 +12,7 @@ import br.com.softsy.model.RetornoAPI;
 
 @Controller
 public class HcController {
-	@RequestMapping(value = { "hc", "HC", "Hc", "hC" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/hc", "/HC", "/Hc", "/hC" }, method = RequestMethod.GET)
 	public @ResponseBody RetornoAPI area(HttpSession session, Model model) throws Exception {
 		RetornoAPI retorno = new RetornoAPI();
 		retorno.setSuccess(true);
