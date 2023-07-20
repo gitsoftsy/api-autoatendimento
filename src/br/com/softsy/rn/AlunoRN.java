@@ -82,7 +82,7 @@ public class AlunoRN {
 
 			List<ListaCartoesAlunoResponse> response = dao.listaCartoesAluno(aluno);
 
-			if (response == null) {
+			if (response == null || response.isEmpty()) {
 				retorno.setSuccess(false);
 				retorno.setMessage("Erro na consulta.");
 				retorno.setResponse(erros);
