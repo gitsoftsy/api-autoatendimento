@@ -44,4 +44,87 @@ public class AlunoController {
 		return rn.listaCartoesAluno(aluno);
 	}	
 	
+	/**
+	 * 
+	 * S006
+	 * 
+	 * @param aluno
+	 * @return
+	 */
+	@RequestMapping(value = { "/financeiro/deletaCartao" }, method = RequestMethod.POST)
+	public @ResponseBody RetornoAPI deletaCartao(@RequestBody ListaCartoesAlunoRequest aluno) {
+		AlunoRN rn = new AlunoRN();
+
+		return rn.deletaCartao(aluno);
+	}	
+	
+	/**
+	 * 
+	 * S008
+	 * 
+	 * @param aluno
+	 * @return
+	 */
+	@RequestMapping(value = { "/financeiro/definirCartaoPrincial" }, method = RequestMethod.POST)
+	public @ResponseBody RetornoAPI definirCartaoPrincial(@RequestBody ListaCartoesAlunoRequest aluno) {
+		AlunoRN rn = new AlunoRN();
+
+		return rn.definirCartaoPrincial(aluno);
+	}	
+	
+	/**
+	 * 
+	 * S014
+	 * 
+	 * @param aluno
+	 * @return
+	 */
+	@RequestMapping(value = { "/financeiro/geraProtocoloAtendiemento" }, method = RequestMethod.GET)
+	public @ResponseBody RetornoAPI geraProtocoloAtendiemento(@RequestBody ListaCartoesAlunoRequest aluno) {
+		AlunoRN rn = new AlunoRN();
+
+		return rn.geraProtocoloAtendiemento(aluno);
+	}
+
+	/**
+	 * 
+	 * S018
+	 * 
+	 * @param aluno
+	 * @return
+	 */
+	@RequestMapping(value = { "/financeiro/definirMeioPagto" }, method = RequestMethod.POST)
+	public @ResponseBody RetornoAPI definirMeioPagto(@RequestBody ListaCartoesAlunoRequest aluno) {
+		AlunoRN rn = new AlunoRN();
+
+		return rn.definirMeioPagto(aluno);
+	}
+	
+	/**
+	 * 
+	 * S022
+	 * 
+	 * @param aluno
+	 * @return
+	 */
+	@RequestMapping(value = { "/financeiro/abrSolValoresIndevidos" }, method = RequestMethod.POST)
+	public @ResponseBody RetornoAPI abrSolValoresIndevidos(@RequestBody ListaCartoesAlunoRequest aluno) {
+		AlunoRN rn = new AlunoRN();
+
+		return rn.abrSolValoresIndevidos(aluno);
+	}
+
+	/**
+	 * 
+	 * S028
+	 * 
+	 * @param aluno
+	 * @return
+	 */
+	@RequestMapping(value = { "/financeiro/listaMatrAluno" }, method = RequestMethod.GET)
+	public @ResponseBody RetornoAPI listaMatrAluno(@RequestBody ListaCartoesAlunoRequest aluno) {
+		AlunoRN rn = new AlunoRN();
+
+		return rn.listaMatrAluno(aluno);
+	}	
 }
