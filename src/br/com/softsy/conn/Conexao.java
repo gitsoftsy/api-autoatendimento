@@ -11,7 +11,11 @@ public class Conexao {
 	public static Connection conectarLyceum() throws ClassNotFoundException, SQLException {
 
 		String connectionUrl = getUrlConnection("LYCEUM");
-		connectionUrl = "jdbc:sqlserver://10.100.12.86:1433;databaseName=Lyceum;encrypt=true;trustServerCertificate=true;user=usr_lycweb;password=Ly!cAk2oT13euMW3b";
+		/*
+		 * Banco Antigo
+		 */
+//		connectionUrl = "jdbc:sqlserver://10.100.12.86:1433;databaseName=Lyceum;encrypt=true;trustServerCertificate=true;user=usr_lycweb;password=Ly!cAk2oT13euMW3b";
+		connectionUrl = "jdbc:sqlserver://10.41.69.3:1433;databaseName=Lyceum;encrypt=true;trustServerCertificate=true;user=usr_lycweb;password=Ly!cAk2oT13euMW3b";
 
 		try {
 
@@ -69,7 +73,11 @@ public class Conexao {
 	}
 
 	public static String getUrlConnection(String bd) {
-		return "jdbc:sqlserver://" + "10.100.12.86" + ":1433;" + "databaseName=" + bd + ";user="
+		/*
+		 * Banco Antigo
+		 */
+//		return "jdbc:sqlserver://" + "10.41.69.3" + ":1433;" + "databaseName=" + bd + ";user="
+		return "jdbc:sqlserver://" + "10.41.69.3" + ":1433;" + "databaseName=" + bd + ";user="
 				+ "usr_lycweb" + ";password=" + "Ly!cAk2oT13euMW3b"+";encrypt=false;trustServerCertificate=false;";
 	}
 
